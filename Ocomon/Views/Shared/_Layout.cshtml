@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Service Manager - ST IT Consulting (@ViewBag.Title)</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="dvGeral">
+        <div id="dvMenuSuperior">
+            
+        </div>
+        <div id="dvMenuLateral">
+            <ul id="ulMenuInicial">
+                <li>
+                    <i><b>Ocorrências</b></i>
+                    <ul id="ulMenuInicial">
+                        <li><a href="/Home/Index">Início</a></li>
+                        <li><a href="/Ocorrencias/AbrirChamado">Abrir Chamado</a></li>
+                        <li><a href="/Ocorrencias/Consultar">Consultar</a></li>
+                        <li><a href="/Ocorrencias/BuscaRapida">Busca Rápida</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul id="ulRelatorios">
+                <li>
+                    <i><b>Relatórios</b></i>
+                    <ul id="ulRelatorios">
+                        <li><a href="/Relatorios/Slas">SLAs</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="dvConteudo">
+            @RenderBody()
+            
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+        </div>
+    </div>
+</body>
+</html>
